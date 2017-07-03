@@ -12,4 +12,13 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+    .js('resources/assets/js/ajaxfileupload.js', 'public/js')
+    .js('resources/assets/js/modal_build.js', 'public/js')
+    .js('resources/assets/js/modal_student.js', 'public/js')
+    .js('resources/assets/js/m/every.js', 'public/js/m')
+    .sass('resources/assets/sass/vip.scss', 'public/css')
+    .sass('resources/assets/sass/vip2.scss', 'public/css')
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .sass('resources/assets/sass/m/every.scss', 'public/css/m')
+    .version()
+    .disableNotifications();
