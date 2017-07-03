@@ -1,0 +1,158 @@
+$maxWidth: 750px;
+$fontSize1: 28px;
+
+
+//边框颜色
+$borderColor1:#e2e2e2;
+$borderColor2:#686868;
+
+
+@function timeS($num,$time) {
+  @if $time == '' {
+    $time: 1
+  }
+  @return $num * $time;
+}
+
+html, body {
+  padding: 0;
+  margin: 0 auto;
+  font-size: 20px;
+  max-width: $maxWidth;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+header {
+  font-size: $fontSize1;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 40px;
+}
+
+.section-wrap {
+  padding: 35px;
+}
+
+.section-box {
+  position: relative;
+  width: 680px;
+  height: 860px;
+  margin: 0 auto;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+
+  .top-box{
+    display: inline-block;
+    height: 520px;
+    vertical-align: top;
+  }
+  .left-box {
+    width: 135px;
+    height: 520px;
+    border-right: 1px solid $borderColor1;
+    float: left;
+    font-size: $fontSize1;
+    writing-mode: tb-rl;
+    text-align: center;
+    line-height: 135px;
+  }
+
+  .right-box {
+    position: relative;
+    width: 545px;
+    height: 860px;
+    float: right;
+    padding-top: 30px;
+    .yearMonth {
+      position: relative;
+      height: 80px;
+      line-height: 80px;
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+      &:before,&:after{
+        width: 60px;
+        height: 1px;
+        content: '';
+        position: absolute;
+        left: 120px;
+        top: 40px;
+        background: #b1b7ba;
+      }
+      &:after{
+        left: auto;
+        right: 120px;
+      }
+    }
+    .day{
+      position: relative;
+      width: 240px;
+      height: 240px;
+      border-radius: 120px;
+      border: 1px solid $borderColor2;
+      text-align: center;
+      font-size: 85px;
+      line-height: 240px;
+      margin: 0 auto;
+      &:after{
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid $borderColor2;
+        top:40%;
+        z-index: 4;
+        right: -12.5px;
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        top:40%;
+        right: -25px;
+        z-index: 2;
+      }
+    }
+  }
+
+  .bottom-box{
+    position: relative;
+    padding: 30px;
+    border-top: 1px solid $borderColor1;
+    p{
+      position: relative;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      text-indent: 30px;
+      font-size: 26px;
+      &:before{
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        transform:rotate(45deg);
+        background: #a8927f;
+        left: 5px;
+        top: 15px;
+      }
+    }
+  }
+}
+
+
